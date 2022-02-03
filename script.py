@@ -6,7 +6,7 @@ warnings.filterwarnings("ignore")
 
 from PIL import Image
 import numpy as np
-from colorizers import eccv16, siggraph17
+from colorizers import siggraph17
 from skimage import color
 import torch
 import torch.nn.functional as F
@@ -59,7 +59,7 @@ def postprocess_tens(tens_orig_l, out_ab, mode='bilinear'):
 	return color.lab2rgb(out_lab_orig.data.cpu().numpy()[0,...].transpose((1,2,0)))
 
 # load colorizers
-colorizer_eccv16 = eccv16(pretrained=True).eval()
+# colorizer_eccv16 = eccv16(pretrained=True).eval()
 colorizer_siggraph17 = siggraph17(pretrained=True).eval()
 
 #load image
@@ -74,7 +74,7 @@ img = cv2.imread(str(image_path))
 # colorizer outputs 256x256 ab map
 # resize and concatenate to original L channel
 img_bw = postprocess_tens(tens_l_orig, torch.cat((0*tens_l_orig,0*tens_l_orig),dim=1))
-out_img_eccv16 = postprocess_tens(tens_l_orig, colorizer_eccv16(tens_l_rs).cpu())
+# out_img_eccv16 = postprocess_tens(tens_l_orig, colorizer_eccv16(tens_l_rs).cpu())
 out_img_siggraph17 = postprocess_tens(tens_l_orig, colorizer_siggraph17(tens_l_rs).cpu())
 
 # plt.imsave('ouput_eccv16.png', out_img_eccv16)
