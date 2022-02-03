@@ -2,7 +2,7 @@ Django==3.2.12
 ipython==7.16.1
 matplotlib==3.3.4
 numpy==1.19.5
-opencv_contrib_python==4.5.5.62
+opencv-python-headless==4.2.0.32
 gunicorn
 Pillow
 requests==2.27.1
