@@ -1,5 +1,5 @@
 Django==3.2.12
-ipython==8.0.1
+ipython==7.16.1
 matplotlib==3.3.4
 numpy==1.19.5
 opencv_contrib_python==4.5.5.62
