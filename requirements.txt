@@ -3,7 +3,7 @@ ipython==7.16.1
 matplotlib==3.3.4
 numpy==1.19.5
 opencv_contrib_python==4.5.5.62
-Pillow==9.0.1
+Pillow
 requests==2.27.1
 scikit_image==0.17.2
 skimage==0.0
