@@ -1,10 +1,33 @@
 
+
 import torch
 import torch.nn as nn
 import numpy as np
 from IPython import embed
 
-from .base_color import *
+
+
+class BaseColor(nn.Module):
+	def __init__(self):
+		super(BaseColor, self).__init__()
+
+		self.l_cent = 50.
+		self.l_norm = 100.
+		self.ab_norm = 110.
+
+	def normalize_l(self, in_l):
+		return (in_l-self.l_cent)/self.l_norm
+
+	def unnormalize_l(self, in_l):
+		return in_l*self.l_norm + self.l_cent
+
+	def normalize_ab(self, in_ab):
+		return in_ab/self.ab_norm
+
+	def unnormalize_ab(self, in_ab):
+		return in_ab*self.ab_norm
+
+
 
 class ECCVGenerator(BaseColor):
     def __init__(self, norm_layer=nn.BatchNorm2d):
@@ -101,6 +124,5 @@ def eccv16(pretrained=True):
 	model = ECCVGenerator()
 	if(pretrained):
 		import torch.utils.model_zoo as model_zoo
-		model.load_state_dict(torch.load('colorization_release_v2-9b330a0b.pth',map_location='cpu'))
-
+		model.load_state_dict(model_zoo.load_url('colorization.pth',map_location='cpu',check_hash=True))
 	return model

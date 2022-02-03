@@ -32,7 +32,7 @@ def external(request):
     gurl = image.stdout
     gurl = gurl.decode("utf-8")
     print(gurl)
-    return render(request, 'home.html', { 'raw_url': templateurl, 'edit_url': gurl})
+    return render(request, 'home4.html', { 'raw_url': templateurl, 'edit_url': gurl})
 
 def contact(request):
     return render(request,'contacts.html')
