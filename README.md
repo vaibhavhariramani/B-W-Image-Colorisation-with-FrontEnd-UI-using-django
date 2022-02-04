@@ -1,12 +1,12 @@
 # Colorising Black and White Image using Deep Learning and Deploying using django as backend
 
 Image Upscaler with Web End Deployment using Django
-# [Image Colorisation-with-Web-End-Deployment](https://imageupscaler.herokuapp.com/)
-## [Checkout Live Model Api at ](https://imageupscaler.herokuapp.com/):[https://imageupscaler.herokuapp.com/](https://imageupscaler.herokuapp.com/)
+# [Image Colorisation-with-Web-End-Deployment](https://imagecolorisation.herokuapp.com/)
+## [Checkout Live Model Api at ](https://imagecolorisation.herokuapp.com/):[https://imagecolorisation.herokuapp.com/](https://imagecolorisation.herokuapp.com/)
 ```
 [https://imageupscaler.herokuapp.com/]
 ```
-[Deployed Model](https://imageupscaler.herokuapp.com/)
+[Deployed Model](https://imagecolorisation.herokuapp.com/)
 
 To run Server on Local machine for image Upscaling
 `python manage.py runserver`
