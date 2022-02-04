@@ -2,14 +2,8 @@ Django==3.2.12
 ipython==7.16.1
 matplotlib==3.3.4
 numpy==1.19.5
-opencv-python-headless==4.2.0.32
-gunicorn
+opencv_contrib_python==4.5.5.62
 Pillow
 requests==2.27.1
 scikit_image==0.17.2
--f https://download.pytorch.org/whl/torch_stable.html
-torch==1.8.1+cpu 
-torchvision==0.9.1+cpu
-fastai>=2.3.1
-ipywidgets
-voila
+torch==1.10.2
