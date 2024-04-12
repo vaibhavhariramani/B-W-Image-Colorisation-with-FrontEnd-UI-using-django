@@ -25,7 +25,7 @@ SECRET_KEY = '5^3g5q$$)$#x+sev1q3cip1=-z3@*ztl6=0@2t!8he=)spo@)j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['imageupscaler.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['imageupscaler.herokuapp.com','127.0.0.1','localhost','.onrender.com']
 MEDIA_URL = 'external/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = 'helloworld.urls'
@@ -117,8 +118,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 VENV_PATH = os.path.dirname(BASE_DIR)
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
