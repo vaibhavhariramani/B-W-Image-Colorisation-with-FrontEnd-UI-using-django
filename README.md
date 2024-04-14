@@ -56,8 +56,6 @@ Hence your model is deployed.....
 Checkout my model [https://imageupscaler.herokuapp.com/](https://imageupscaler.herokuapp.com/)
 ============================================================================ 
 
-
-
 # Resources 
 
 To learn more about these Resources you can Refer to some of these articles written by Me:-
