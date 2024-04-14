@@ -46,10 +46,10 @@ Rzang Approach:
 <!-- ![ SRCNN zoom](https://github.com/vaibhavhariaramani/Image_Upscaling_Algorithms/blob/main/1_SRCNN/images/3_srcnn.jpg "SRCNN zoom") -->
 
 ## Deploying ML model on HEROKU
-1. Sign up or Login to [HEROKU](https://www.heroku.com/)
-2. Go to [heroku dashboard](https://dashboard.heroku.com/apps)
+1. Sign up or Login to [Render]([https://www.heroku.com/](https://render.com/))
+2. Go to [render dashboard]([https://dashboard.heroku.com/apps](https://dashboard.render.com/))
 3. Click on create on new apps
-4. Give a name to your model app such as 'Linear-Regression'
+4. Give a name to your model app such as 'coloriser'
 5. Connect app with your ML model Github Repo
 6. Click on deploy model
 Hence your model is deployed.....
